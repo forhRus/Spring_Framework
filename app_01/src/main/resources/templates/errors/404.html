@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Подгружаем title из файла messages.properties -->
+    <title data-th-text="#{'errors.404.title'}">TITLE</title>
+</head>
+<body>
+<!-- Подгружаем заголовок из файла messages.properties -->
+<h1 data-th-text="#{'errors.404.header'}">HEADER</h1>
+<h2 data-th-text="${error}"></h2>
+</body>
+</html>

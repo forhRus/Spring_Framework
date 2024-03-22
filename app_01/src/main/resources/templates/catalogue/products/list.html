@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список товаров &ndash; MyStore</title>
+
+</head>
+<body>
+<h1>Список товаров</h1>
+<table>
+    <tr>
+        <th>#</th>
+        <th>title</th>
+    </tr>
+    <tr data-th-each="product : ${products}">
+        <td data-th-text="${product.id}">ID</td>
+        <td>
+            <a data-th-href="@{/catalogue/product/{productId}/info(productId=${product.id})}"
+               data-th-text="${product.title}">TITLE_LINK</a></td>
+    </tr>
+</table>
+<p><a data-th-href="@{/catalogue/products/new}">Создать новый товар</a></p>
+</body>
+</html>
